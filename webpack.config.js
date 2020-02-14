@@ -1,6 +1,6 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const path = require("path");
+const HtmlWebPackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const path = require("path")
 
 
 module.exports = (argv = {}) => ({
@@ -43,6 +43,23 @@ module.exports = (argv = {}) => ({
                     }
                 ]
             },
+            {
+                test: /\.less$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    {
+                        loader: "css-loader"
+                    },
+                    {
+                        loader: "less-loader",
+                        options: {
+                            javascriptEnabled: true
+                        }
+                    }
+                ]
+            }
         ]
     },
     plugins: [
@@ -57,8 +74,16 @@ module.exports = (argv = {}) => ({
             filename: "./index.html",
         })
     ],
+    resolve: {
+        extensions: [".js"],
+        alias: {
+            actions: path.resolve(__dirname, "./src/actions/"),
+            reducers: path.resolve(__dirname, "./src/reducers/"),
+            translations: path.resolve(__dirname, "./src/translations/"),
+        }
+    },
     devServer: {
         publicPath: "/",
         port: 3000
     }
-});
+})
