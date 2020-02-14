@@ -1,6 +1,7 @@
 import React from 'react'
 import {IntlProvider} from "react-intl"
 import Header from './header/Header'
+import Main from './main/Main'
 import messages_en from "translations/en.json"
 import messages_fr from "translations/fr.json"
 import {LANGUAGES} from './header/Language'
@@ -14,6 +15,7 @@ const messages = {
 const App = ({language}) => (
     <IntlProvider locale={language} messages={messages[language]}>
         <Header/>
+        <Main/>
     </IntlProvider>
 )
 

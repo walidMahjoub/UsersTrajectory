@@ -4,6 +4,14 @@ const path = require("path")
 
 
 module.exports = (argv = {}) => ({
+    entry: {
+        bundle: "./src/index.js"
+    },
+    output: {
+        path: path.resolve(__dirname, "dest"),
+        filename: "[name].[hash].js",
+        publicPath: "/"
+    },
     module: {
         rules: [
             {
@@ -80,10 +88,13 @@ module.exports = (argv = {}) => ({
             actions: path.resolve(__dirname, "./src/actions/"),
             reducers: path.resolve(__dirname, "./src/reducers/"),
             translations: path.resolve(__dirname, "./src/translations/"),
+            data: path.resolve(__dirname, "./src/data/"),
+            apis: path.resolve(__dirname, "./src/apis/"),
         }
     },
     devServer: {
         publicPath: "/",
+        historyApiFallback: true,
         port: 3000
     }
 })

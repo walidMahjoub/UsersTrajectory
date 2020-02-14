@@ -2,5 +2,7 @@
   "app.header.title": "trajectory statistics",
   "app.header.language": "Language",
   "app.header.language.fr": "Frensh",
-  "app.header.language.en": "English"
+  "app.header.language.en": "English",
+  "app.main.userList.title": "List of people IDs",
+  "app.main.userList.action": "Action"
 }
