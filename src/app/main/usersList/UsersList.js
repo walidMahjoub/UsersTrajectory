@@ -14,7 +14,8 @@ const UsersList = ({history}) => {
     const columns = [
         {
             title: <FormattedMessage id="app.main.userList.title"/>,
-            dataIndex: 'id', key: 'id'
+            dataIndex: 'id',
+            key: 'id'
         },
         {
             title: <FormattedMessage id="app.main.userList.action"/>,

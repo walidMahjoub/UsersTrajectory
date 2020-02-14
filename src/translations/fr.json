@@ -4,5 +4,7 @@
   "app.header.language.fr": "Français",
   "app.header.language.en": "Anglais",
   "app.main.userList.title": "Liste des ID des personnes",
-  "app.main.userList.action": "Action"
+  "app.main.userList.action": "Action",
+  "app.main.userTrajectory.noTrajectory": "Pas de trajectoire avec id : {id}",
+  "app.main.userTrajectory.title": "Trajectoire : {id}"
 }
