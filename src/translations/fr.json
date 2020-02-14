@@ -6,5 +6,9 @@
   "app.main.userList.title": "Liste des ID des personnes",
   "app.main.userList.action": "Action",
   "app.main.userTrajectory.noTrajectory": "Pas de trajectoire avec id : {id}",
-  "app.main.userTrajectory.title": "Trajectoire : {id}"
+  "app.main.userTrajectory.title": "Trajectoire : {id}",
+  "app.main.userTrajectory.nbArrests": "nombre des arrêts : {nbArrests}",
+  "app.main.userTrajectory.distance": "Distance parcourue : {distance} mètres",
+  "app.main.userTrajectory.trajectoryDuration": "Durée du parcour : {trajectoryDuration} minutes",
+  "app.main.userTrajectory.averageSpeed": "Vitesse moyenne : {averageSpeed} mètre/minute"
 }

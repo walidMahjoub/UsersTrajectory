@@ -8,7 +8,7 @@ module.exports = (argv = {}) => ({
         bundle: "./src/index.js"
     },
     output: {
-        path: path.resolve(__dirname, "dest"),
+        path: path.resolve(__dirname, "dist"),
         filename: "[name].[hash].js",
         publicPath: "/"
     },
@@ -90,6 +90,7 @@ module.exports = (argv = {}) => ({
             translations: path.resolve(__dirname, "./src/translations/"),
             data: path.resolve(__dirname, "./src/data/"),
             apis: path.resolve(__dirname, "./src/apis/"),
+            helpers: path.resolve(__dirname, "./src/helpers/"),
         }
     },
     devServer: {
